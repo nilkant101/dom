@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+<style>  
+    .bg-black{
+        background-color: rgb(61, 59, 59);
+        color: white;
+    }
+</style>
+<body class="bg-black">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wednesday</div>
+    </div>
+
+</body>
+
+<script>
+        const div = document.createElement('div')
+        console.log(div);
+        div.className = "main"
+        div.id = Math.round(Math.random()*10+1)
+        div.setAttribute("title", "generated title")
+        div.style.backgroundColor = "yellow"
+        div.style.padding = "12px"
+        
+        //***adding tec=xt inside div using 2 type
+       
+        // div.innerText = "helloEveryone"
+        const  addText = document.createTextNode("helloEveyone2")
+        div.appendChild(addText)
+
+        //**adding on body 
+        document.body.appendChild(div)
+
+    const parent = document.querySelector('.parent')
+    // console.log(parent);
+    // console.log(parent.children);
+    // console.log(parent.children[2].innerHTML);
+
+    // for (let i = 0 ; i < parent.children.length; i++){
+    //     console.log(parent.children[i].innerHTML);
+    // }  //output Monday Tuesday Wednesday
+
+        parent.children[1].style.color = "red"
+        
+       //**********selcting child*******
+       // console.log(parent.firstElementChild);
+       // console.log(parent.lastElementChild);
+    
+   
+    //    const dayOne = document.querySelector('.day')
+    //    console.log(dayOne);
+    //    console.log(dayOne.parentElement);// selecting parent through childelement  
+       
+       
+       //console.log(dayOne.nextElementSibling);
+       //out put :-<div class="day" style="color: red;">Tuesday</div>
+
+
+        
+
+    </script>
+
+</html>
