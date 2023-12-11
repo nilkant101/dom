@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom</title>
+</head>
+<body>
+    <div class="counter">
+        <ul class="langauge">
+            <li>javaScript22</li>
+        </ul>
+    </div>
+
+    
+    
+    
+    <h1>The Element Object</h1>
+    <h2>The setAttribute() Method</h2>
+
+    <a id="myAnchor">websie</a>
+    <button onclick="myFunction()">Try  it</button>
+
+
+</body>
+<script>
+
+    const li = document.createElement('li')
+    function namesaving (save){
+     li.innerHTML = `${save}`
+    document.querySelector(".langauge").appendChild(li)
+    }
+
+    namesaving("nil")
+
+
+function myFunction() {
+ const myAnchor =  document.getElementById("myAnchor")
+ myAnchor.setAttribute("href"," google.com"); 
+
+ console.log(myAnchor);
+}
+
+
+
+
+</script>
+
+
+</body>
+</html>
